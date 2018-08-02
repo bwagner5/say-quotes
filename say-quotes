@@ -27,7 +27,7 @@ if __FILE__==$0
   if ARGV[0] == "--help"
     puts "say-quotes will speak a quote every 24 hours from the time it was installed."
     puts "If you don't know how this was installed, you most likely left your computer unlocked and a friendly co-worker decided to provide you with inspirational quotes :)"
-    puts "Never fear, if you need to uninstall, simply execute \"brew remove say-quotes\""
+    puts "Never fear, if you need to uninstall, simply execute \"brew uninstall say-quotes\""
   else
     speak_quote
   end
