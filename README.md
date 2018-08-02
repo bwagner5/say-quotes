@@ -6,6 +6,7 @@ Uses the mac "say" command to speak quotes every so often. Fun to quickly instal
 ```
 brew tap bwagner5/wagner
 brew install say-quotes
+brew services start say-quotes
 ```
 
 # Uninstall
