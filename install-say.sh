@@ -13,7 +13,7 @@ cat <<EOF
 
   <key>ProgramArguments</key>
   <array>
-    <string>/Users/$USER/say-quotes/say-quotes.sh</string>
+    <string>/Users/$USER/say-quotes/say-quotes.rb</string>
   </array>
 
   <key>Nice</key>
