@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require 'net/http'
+require 'uri'
+require 'json'
+
+def say(message)
+  `say -v 'Samantha' --quality 127 #{message}`
+end
+
+def speak_quote()
+  uri = URI.parse("https://quotes.rest/qod")
+
+  response = Net::HTTP.get_response(uri)
+
+  if response.code == '200'
+    response_body = response.body
+    quote = JSON.parse(response_body)['contents']['quotes'][0]['quote']
+    say(quote)
+    sleep 2
+    say("Looks like you left your computer unlocked, uninstall with brew remove say-quotes")
+  end
+end
+
+if __FILE__==$0
+
+  if ARGV[0] == "--help"
+    puts "say-quotes will speak a quote every 24 hours from the time it was installed."
+    puts "If you don't know how this was installed, you most likely left your computer unlocked and a friendly co-worker decided to provide you with inspirational quotes :)"
+    puts "Never fear, if you need to uninstall, simply execute \"brew remove say-quotes\""
+  else
+    speak_quote
+  end
+
+end
+
+
