@@ -18,7 +18,7 @@ def speak_quote()
     quote = JSON.parse(response_body)['contents']['quotes'][0]['quote']
     say(quote)
     sleep 2
-    say("Looks like you left your computer unlocked, uninstall with brew remove say-quotes")
+    say("Looks like you left your computer unlocked, uninstall with brew uninstall say-quotes")
   end
 end
 
